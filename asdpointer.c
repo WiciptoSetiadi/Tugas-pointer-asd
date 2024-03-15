@@ -49,7 +49,10 @@ int main() {
 
     selectOption = checkLenghtRequirement(text);
 
-    // TODO
+    void (*functions[3])(int *) = {lessThanRequired, equalThanRequired, moreThanRequired};
+    lengthOfText = strlen(text);
+    (*functions[selectOption])(&lengthOfText);
+
     // Pada fungsi checkLenghtRequirement akan mengembalikan sebuah angka
     // angka tersebut digunakan untuk memilih secara otomatis salah satu fungsi yang digunakan
     // jika fungsi checkLenghtRequirement() mengembalikan nilai 0, maka
